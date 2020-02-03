@@ -87,10 +87,10 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *tmp;
 
-	current = *list;
-
-	if (!(*list) || !list || !current->next)
+	if (list == NULL || *list == NULL || !current->next)
 		return;
+
+	current = *list;
 
 	while (current)
 	{
