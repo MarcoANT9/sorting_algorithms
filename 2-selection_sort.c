@@ -9,8 +9,8 @@
  * Description - This program traverses an array and compares the selected
  *               element with the rest of the array, if it finds a lower value
  *               than the selected one, it swapes their positions and continues
- *               with the new element. It then continues with the second element
- *               in the array until it finishes.
+ *               with the new element. It then continues with the second
+ *               element in the array until it finishes.
  *
  * Return: Nothing (void).
  *
@@ -19,7 +19,6 @@ void selection_sort(int *array, size_t size)
 {
 	size_t index, jndex, lower_pos;
 	int tmp, menor, change;
-
 
 	if (size < 2)
 		return;
