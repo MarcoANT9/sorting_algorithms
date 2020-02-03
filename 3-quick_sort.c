@@ -20,13 +20,14 @@ int partition(int *array, int low, int high, size_t size)
 	index = low;
 	for (jndex = index; jndex < high; jndex++)
 	{
-		if (array[jndex] < pivot)
+		if (array[jndex] <= pivot)
 		{
 			if (index != jndex)
 			{
 				tmp = array[jndex];
 				array[jndex] = array[index];
 				array[index] = tmp;
+				print_array(array, size);
 			}
 			index++;
 		}
@@ -52,7 +53,7 @@ int partition(int *array, int low, int high, size_t size)
 
 void squick(int *array, int low, int high, size_t size)
 {
-	int pivot;
+	int pivot = 0;
 
 	if (low < high)
 	{
