@@ -24,18 +24,21 @@ int partition(int *array, int low, int high, size_t size)
 		{
 			if (index != jndex)
 			{
-				tmp = array[jndex];
-				array[jndex] = array[index];
-				array[index] = tmp;
+				tmp = array[index];
+				array[index] = array[jndex];
+				array[jndex] = tmp;
 				print_array(array, size);
 			}
 			index++;
 		}
 	}
-	tmp = array[index];
-	array[index] = array[high];
-	array[high] = tmp;
-	print_array(array, size);
+	if (index != high)
+	{
+		tmp = array[index];
+		array[index] = array[high];
+		array[high] = tmp;
+		print_array(array, size);
+	}
 	return (index);
 }
 
