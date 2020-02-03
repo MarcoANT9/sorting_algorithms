@@ -89,7 +89,7 @@ void insertion_sort_list(listint_t **list)
 
 	current = *list;
 
-	if (!list || !*list || !current->next)
+	if (!(*list) || !list || !current->next)
 		return;
 
 	while (current)
